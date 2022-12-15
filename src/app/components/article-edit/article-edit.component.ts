@@ -3,7 +3,10 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Article } from '../../models/article';
 import { ArticleServices } from '../../services/article.services';
 import { UrlApi } from '../../services/varglobal';
-import swal from 'sweetalert';
+import * as _swal from 'sweetalert';
+import { SweetAlert } from 'sweetalert/typings/core';
+
+const swal: SweetAlert = _swal as any;
 
 @Component({
   selector: 'app-article-edit',
